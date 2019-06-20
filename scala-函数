@@ -1,0 +1,13 @@
+闭包是一个函数，一种比较特殊的函数。为了解释闭包这个概念，
+我们在Linux系统的“/usr/local/scala/mycode”目录下新建test.scala代码文件，里面包含以下内容：
+object MyTest{
+    def main(args: Array[String]): Unit={    
+        def plusStep(step: Int) = (num: Int) => num + step
+        //给step赋值
+        val myFunc = plusStep(3)
+        //调用myFunc函数
+        println(myFunc(10))     
+    }
+}
+在上面的MyTest中， step是一个自由变量，它的值只有在运行的时候才能确定，
+num的类型是确定的，num的值只有在调用的时候才被赋值。这样的函数，被称为“闭包”，它反映了一个从开放到封闭的过程。
