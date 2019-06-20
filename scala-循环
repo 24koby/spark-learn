@@ -1,0 +1,3 @@
+for(i<-1 to 5){}
+i是val类型 且每次回生成i实例
+foreach方法   (1 to 5).foreach(i=>print(i))
