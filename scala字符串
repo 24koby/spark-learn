@@ -1,0 +1,10 @@
+scala中的字符串类型是java中的String
+创建跨行字符串将多行字符串放在"""str"""中
+
+字符串字面量$discount
+println(s"sada $discount"）  s为s插值器，它会找到字符串中的表达式，并将其替换为对应的值  ${dicount/price}
+
+输出格式化时可以采用f插值器
+raw插值器，
+隐式类 implict class
+
