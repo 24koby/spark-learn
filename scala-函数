@@ -11,3 +11,17 @@ object MyTest{
 }
 在上面的MyTest中， step是一个自由变量，它的值只有在运行的时候才能确定，
 num的类型是确定的，num的值只有在调用的时候才被赋值。这样的函数，被称为“闭包”，它反映了一个从开放到封闭的过程。
+
+函数中传递变长参数
+def max(values: Int*)=values.foldLeft(values(0)){Math.max}  限定类型
+def max(values: _*)=values.foldLeft(values(0)){Math.max} 不限定类型
+
+参数默认值
+def fuc(arg1:String = "das",arg2: Int = 5): Unit =println(s"send $arg and $arg2")
+采用默认值后可以省略参数调用
+但是默认值是按变量的位置顺序赋值，就是必须要从第一个参数使用默认值后面的默认值才能使用:解决方法如下：命名参数传值
+可以指定方法中参数名例如 fuc(arg2="sa"),但是对于没有默认值的参数必须给定值，有默认值的可以选择使用命名参数传值，一个参数只能传一个值
+
+隐式参数
+需要在变量前声明implict
+
