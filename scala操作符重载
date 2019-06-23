@@ -1,0 +1,5 @@
+scala中严格的说是没有操作符，所有的都是方法。
+class Complex(val real: Int, val image: Int){
+  def +(operation: Complex):Complex = {new Complex(real+operation.real,image+operation.image)}
+  }
+  
