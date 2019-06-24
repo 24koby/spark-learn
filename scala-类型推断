@@ -1,0 +1,17 @@
+针对结合的类型推断
+var list1 = new util.ArrayList[Int]
+var list2 = new util.ArrayList  //会生成ArrayList[Nothing]类型
+list1 == list2//编译错误
+
+基础类型
+Any是所有类型的基类
+Nothing是所有类型的子类
+
+Option类型包括Some和None,推荐集合中尽量返回空值而不要返回null
+
+Either类型包括左值(Left,一般指错误)和右值(Right，一般指正确类型的值)
+
+在定义函数时，scala也可以对函数返回值进行类型推断
+
+参数化类型的型变
+协变：
