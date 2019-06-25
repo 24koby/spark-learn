@@ -1,0 +1,19 @@
+常见的Scala集合
+List Set Map
+集合分为可变集合和不可变集合  不可变集合是线程安全的 
+scala.collection.mutable  scala.collection.immutable
+
+Map中获取值
+get()返回的值类型是Option[T]
+feel("sdas")返回的类型是T，它调用的是apply()方法
+
+a::b
+a前插到b
+a:::b
+a追加b列表 生成新列表，调用的是b的前缀方法:::
+
+/: 方法等价于foldLeft (0 /: feeds){_+_.length}  第一个_为初始值，第二个_为元素
+\: 方法等价于foldRight
+
+
+
