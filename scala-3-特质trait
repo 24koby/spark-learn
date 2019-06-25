@@ -10,3 +10,14 @@ trait CarId{
 }
 
 特质中可以有默认实现
+
+特质中的变量和方法都被认为是抽象的
+类中可以继承特质
+实例中也可以混入特质
+trait Friend{}
+
+class Cat{}
+
+var angel = new Cat with Friend
+
+特质中的延迟绑定  不懂
