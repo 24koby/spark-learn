@@ -25,3 +25,31 @@ def fuc(arg1:String = "das",arg2: Int = 5): Unit =println(s"send $arg and $arg2"
 隐式参数
 需要在变量前声明implict
 
+闭包，是函数的特殊形式，会捕获或者绑定在另一个作用域或上下文中定义的变量
+
+
+可扩展性和高阶函数
+可以将其他函数作为参数的函数成为高阶函数，它能减少代码重复，提高代码复用性，简化代码
+def totalResultOverRange(number: Int, codeBlock:Int=> Int)={
+	var result = 0
+	for(i<- 1 to number){
+		result += codeBlock(i)
+	}
+	result
+}
+
+柯里化
+它会把接收多个参数的函数转化为接收多个参数列表的函数
+它是将函数中的多个参数转化为多个参数列表
+def inject(arr: Array[Int], initial: Int)(operation:(Int,Int)=>Int):Int={
+	var carryOver = initial
+	arr.foreach(element => carryOver = operation(carryOver,element))
+	carryOver
+}
+var sum: Int = inject(array, 0) {(carryOver.elem)=> carryOver + elem}
+
+参数占位符_
+
+
+
+
